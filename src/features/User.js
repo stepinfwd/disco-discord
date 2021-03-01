@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   decrement,
   increment,
   incrementByAmount,
   incrementAsync,
-  selectCount,
-} from './counterSlice';
-import styles from './Counter.module.css';
+  selectuser,
+} from "./userSlice";
+import styles from "./user.module.css";
 
-export function Counter() {
-  const count = useSelector(selectCount);
+export function user() {
+  const user = useSelector(selectuser);
   const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState("2");
 
   return (
     <div>
@@ -24,7 +24,7 @@ export function Counter() {
         >
           +
         </button>
-        <span className={styles.value}>{count}</span>
+        <span className={styles.value}>{us}</span>
         <button
           className={styles.button}
           aria-label="Decrement value"
@@ -38,7 +38,7 @@ export function Counter() {
           className={styles.textbox}
           aria-label="Set increment amount"
           value={incrementAmount}
-          onChange={e => setIncrementAmount(e.target.value)}
+          onChange={(e) => setIncrementAmount(e.target.value)}
         />
         <button
           className={styles.button}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter } from "./features/Counter";
+import { app } from "./features/appSlice";
 import "./App.css";
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";

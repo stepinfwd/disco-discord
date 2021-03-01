@@ -16,7 +16,7 @@ function Chat() {
         <Message />
         <Message />
         <Message />
-      </div>
+       </div>
       <div className="chat__input">
         <AddCircleOutlineRoundedIcon fontSize="large" />
         <form>
