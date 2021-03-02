@@ -5,6 +5,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import SidebarChannel from "./SidebarChannel";
 import MicIcon from "@material-ui/icons/Mic";
 import HeadsetIcon from "@material-ui/icons/Headset";
+import logo from "../src/features/logo.png"
 
 import SettingsIcon from "@material-ui/icons/Settings";
 
@@ -13,8 +14,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__top">
-        <h3>CHATTABLE</h3>
-        <ExpandMoreIcon />
+<img src={logo}></img>       <ExpandMoreIcon />
       </div>
       <div className="sidebar__channels">
         <div className="sidebar__channelsHeader">

@@ -16,8 +16,11 @@
   color: white;
   border-bottom: 3px solid #26282c;
 }
+.sidebar__top img{
+  width: 10rem;
+}
 .sidebar__top > h3 {
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 .sidebar__channels {
   flex: 1;
