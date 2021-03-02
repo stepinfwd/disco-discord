@@ -5,6 +5,7 @@ import "./App.css";
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
 import { selectUser } from "./features/userSlice";
+import Login from "./Login";
 
 function App() {
   const user = useSelector(selectUser);
@@ -17,7 +18,7 @@ function App() {
           <Chat />
         </>
       ) : (
-        <p>you have to Login</p>
+        <Login/>
       )}
     </div>
   );
