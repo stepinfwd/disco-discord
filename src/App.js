@@ -35,8 +35,8 @@ function App() {
       {user ? (
         <>
           {" "}
-          <Sidebar />
-          <Chat />
+          <Sidebar className="left__sidebar" />
+          <Chat className="right__sidebar"  />
         </>
       ) : (
         <Login />

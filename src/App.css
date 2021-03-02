@@ -1,4 +1,11 @@
 .App {
   display: flex;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-image: url("./back.png");
+  background-size: cover;
+}
+@media only screen and (max-width: 600px) {
+  .left__sidebar {
+    /* flex: 0.5 1; */
+  }
 }
