@@ -12,7 +12,7 @@ function Login() {
         <h2> Welcome Back!</h2>
         <h3>we are so excited to see you again!</h3>
         <div className="login_logo">
-          <img src="https://devatagame.com/wp-content/uploads/2021/01/1200px-Discord_logo.svg-1.png"></img>
+          <img alt="" src="https://devatagame.com/wp-content/uploads/2021/01/1200px-Discord_logo.svg-1.png"></img>
         </div>
         <Button onClick={signIn}>Sign in</Button>
       </div>
