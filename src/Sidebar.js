@@ -16,13 +16,13 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import db, { auth } from "./fire";
 
 import firebase from "firebase";
-import 'firebase/firestore';
+import "firebase/firestore";
 
 import { Avatar } from "@material-ui/core";
 function Sidebar() {
   const user = useSelector(selectUser);
-  const [channels, setChannels] = useState("");
- 
+  const [channels, setChannels] = useState([]);
+
   useEffect(() => {
     db.collection("channels").onSnapshot((snapshot) =>
       setChannels(
@@ -48,15 +48,20 @@ function Sidebar() {
         <div className="sidebar__channels">
           <div className="sidebar__channelsHeader">
             <div className="sidebar__header">
-              <ExpandMoreIcon  />
+              <ExpandMoreIcon />
               <h4>Test Channel</h4>
             </div>
 
             <AddIcon className="sidebar__addChannel" onClick={handleAdd} />
           </div>
           <div className="sidebar__channelList">
-            {channels?channels.map(({id,channel}) => (
-              <SidebarChannel id={id} key={id} channelName={channel.channelName}  />)):<p>test channel</p>}
+            {channels.map(({ id, channel }) => (
+              <SidebarChannel
+                id={id}
+                key={id}
+                channelName={channel.channelName}
+              />
+            ))}
             {/* <SidebarChannel />
             <SidebarChannel />
             <SidebarChannel />
@@ -65,20 +70,20 @@ function Sidebar() {
           </div>
         </div>
         <div className="sidebar__voice">
-        <SignalCellularAltIcon
-          className="sidebar__voiceIcon"
-          fontSize="large"
-        />
-        <div className="sidebar__voiceInfo">
-          <h3>Voice Connected</h3>
-          <p>Stream</p>
-        </div>
+          <SignalCellularAltIcon
+            className="sidebar__voiceIcon"
+            fontSize="large"
+          />
+          <div className="sidebar__voiceInfo">
+            <h3>Voice Connected</h3>
+            <p>Stream</p>
+          </div>
 
-        <div className="sidebar__voiceIcons">
-          <InfoOutlinedIcon />
-          <CallIcon />
+          <div className="sidebar__voiceIcons">
+            <InfoOutlinedIcon />
+            <CallIcon />
+          </div>
         </div>
-      </div>
         <div className="sidebar__profile">
           <Avatar onClick={() => auth.signOut()} src={user.photo} />
           <div className="sidebar__profileInfo">
